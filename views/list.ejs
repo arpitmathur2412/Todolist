@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>To do List</title>
+</head>
+<body>   
+   <div class="box" id="heading">
+      <h1><%= theDay %></h1>
+   </div>
+
+    <div class="box">
+     
+      <% newlistitem.forEach((item)=>{%>
+         <div class="item">
+            <input type="checkbox" class="input">
+         <p><%= item.task %> </p>
+         </div>
+         <%})%>
+
+         <form action="/" method="post" class="item">
+            <input type="text" class="input" placeholder="NEW ITEM" name="newItem" autocomplete="off">
+            <button type="submit" name="button" class="button">+</button>
+         </form>
+    </div>
+
+</body>
+</html>
